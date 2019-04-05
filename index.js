@@ -3,7 +3,7 @@ var express = require("express");
 var app = express();
 
 app.get("/", function(req, res) {
-  res.send("Hello world!");
+  res.send("god says you have to go the shazam movie!");
 });
 
 app.listen(port);
