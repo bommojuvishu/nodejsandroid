@@ -49,7 +49,6 @@ app.post("/upload", function(req, res) {
 });
 
 app.get("/", function(req, res) {
-<<<<<<< HEAD
   request(url)
     .pipe(writeFile)
     .on("close", function() {
@@ -66,9 +65,6 @@ app.get("/", function(req, res) {
           process.exit(0);
         });
     });
-=======
-  res.send("god says you have to go the shazam movie!");
->>>>>>> 33bc8776241d1d34dc1c87cca195a54507a4b5ab
 });
 
 app.listen(port, () => {
