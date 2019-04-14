@@ -49,22 +49,7 @@ app.post("/upload", function(req, res) {
 });
 
 app.get("/", function(req, res) {
-  request(url)
-    .pipe(writeFile)
-    .on("close", function() {
-      console.log(url, "saved to", filename);
-      Tesseract.recognize(filename)
-        .progress(function(p) {
-          console.log("progress", p);
-        })
-        .catch(err => console.error(err))
-        .then(function(result) {
-          console.log(result.text);
-          res.send(result.text);
-
-          process.exit(0);
-        });
-    });
+  res.send("Hello world from vishu");
 });
 
 app.listen(port, () => {
