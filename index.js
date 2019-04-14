@@ -4,6 +4,8 @@ var Tesseract = require("tesseract.js");
 var request = require("request");
 var fs = require("fs");
 
+var cors = require("cors");
+
 var url = "http://tesseract.projectnaptha.com/img/eng_bw.png";
 var filename = "pic.png";
 
@@ -18,14 +20,7 @@ const fileUpload = require("express-fileupload");
 const app = express();
 
 // enable cors
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept"
-  );
-  next();
-});
+app.use(cors());
 
 // default options
 app.use(fileUpload());
